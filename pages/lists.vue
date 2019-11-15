@@ -5,8 +5,10 @@
       <li v-for="(list, index) in lists" :key="index">
         {{ list }}
       </li>
-      <li><input @keyup.enter="add" placeholder="What needs to be done?"></li>
     </ul>
+    <form @submit.prevent="create" method="post">
+      <input type="text" name="name">
+    </form>
   </div>
 </template>
 
