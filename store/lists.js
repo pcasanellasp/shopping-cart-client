@@ -16,7 +16,6 @@ export const actions = {
     }
   },
   async createList ({ commit }, lists) {
-    console.info(lists)
     const res = await this.$axios.post(lists)
     if (res.status === 200) {
       commit('add', res.data)

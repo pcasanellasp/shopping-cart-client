@@ -16,7 +16,9 @@
 import { mapGetters, mapMutations, mapActions } from 'vuex'
 
 export default {
-
+  head: {
+    title: 'Lists Products'
+  },
   computed: mapGetters({
     lists: 'lists/get'
   }),
