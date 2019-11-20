@@ -1,12 +1,13 @@
 <template>
   <v-bottom-navigation
     v-model="bottomNav"
+    fixed
   >
     <v-btn :to="{name: 'lists'}" value="lists">
       <span>Lists</span>
       <v-icon>mdi-history</v-icon>
     </v-btn>
-    <v-btn :to="{name: 'products'}" value="products">
+    <v-btn :to="{name: 'lists'}" value="products">
       <span>Products</span>
       <v-icon>mdi-history</v-icon>
     </v-btn>

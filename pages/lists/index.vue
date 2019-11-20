@@ -1,14 +1,12 @@
 <template>
   <div>
-    <h2>Lists</h2>
-    <ul>
-      <li v-for="(list, index) in lists" :key="index">
-        {{ list }}
-      </li>
-    </ul>
-    <form @submit.prevent="create" method="post">
-      <input type="text" name="name">
-    </form>
+    <v-list-item-group color="primary">
+      <v-list-item v-for="(item, i) in lists.docs" :key="i" :to="{name: 'lists-id', params: {id: lists.docs[i]._id}}">
+        <v-list-item-content>
+          {{ item.name }}
+        </v-list-item-content>
+      </v-list-item>
+    </v-list-item-group>
   </div>
 </template>
 

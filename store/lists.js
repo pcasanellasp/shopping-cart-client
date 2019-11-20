@@ -1,5 +1,5 @@
 export const state = () => ({
-  lists: []
+  lists: null
 })
 
 export const getters = {
@@ -25,6 +25,6 @@ export const actions = {
 
 export const mutations = {
   add (state, list) {
-    state.lists.push(list)
+    state.lists = list
   }
 }
