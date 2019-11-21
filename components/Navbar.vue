@@ -3,7 +3,7 @@
     <v-app-bar color="indigo darken-2" dark flat>
       <v-app-bar-nav-icon @click.prevent="drawer = !drawer" />
       <v-spacer />
-      <v-btn v-if="isAuth" icon>
+      <v-btn @click.prevent="logout" icon>
         <v-icon>mdi-logout</v-icon>
       </v-btn>
     </v-app-bar>
@@ -17,7 +17,7 @@
           <v-img src="https://randomuser.me/api/portraits/men/7.jpg" />
         </v-list-item-avatar>
         <v-list-item-content>
-          <v-list-item-title>{{ user.username }}</v-list-item-title>
+          <v-list-item-title>{{ auth.username }}</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
 
@@ -36,7 +36,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['isAuth', 'user'])
+    ...mapGetters(['isAuth', 'auth'])
   },
   methods: {
     async logout () {

@@ -5,11 +5,11 @@
     </h2>
     <p>
       <strong>Username:</strong>
-      {{ user.username }}
+      {{ auth.username }}
     </p>
     <p>
       <strong>Email:</strong>
-      {{ user.email }}
+      {{ auth.email }}
     </p>
   </div>
 </template>
@@ -21,7 +21,7 @@ export default {
   middleware: 'auth',
 
   computed: {
-    ...mapGetters(['user'])
+    ...mapGetters(['auth'])
   }
 }
 </script>
