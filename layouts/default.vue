@@ -2,7 +2,7 @@
   <div>
     <Navbar />
     <nuxt />
-    <Footer v-if="isAuthenticated" />
+    <Footer v-if="isAuth" />
   </div>
 </template>
 
@@ -17,7 +17,7 @@ export default {
     Footer
   },
   computed: {
-    ...mapGetters(['isAuthenticated', 'loggedInUser'])
+    ...mapGetters(['isAuth', 'user'])
   }
 }
 </script>
