@@ -3,7 +3,7 @@
     <v-list-item-group color="primary">
       <v-list-item v-for="(item, i) in lists.docs" :key="i" :to="{name: 'lists-id', params: {id: lists.docs[i]._id}}">
         <v-list-item-content>
-          {{ item.name }}
+          {{ item.name }} {{ item.products.length }}
         </v-list-item-content>
       </v-list-item>
     </v-list-item-group>
@@ -14,6 +14,7 @@
 import { mapGetters, mapMutations, mapActions } from 'vuex'
 
 export default {
+  middleware: 'auth',
   head: {
     title: 'Lists Products',
   },
