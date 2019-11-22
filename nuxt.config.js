@@ -59,6 +59,7 @@ export default {
   pwa: {
     manifest: {
       name: 'Shopping Cart',
+      short_name: 'Shopping Cart',
       lang: 'es',
       display: 'fullscreen',
     },
