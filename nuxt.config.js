@@ -68,6 +68,9 @@ export default {
       autoRegister: true,
     },
   },
+  serverMiddleware: [
+    'redirect-ssl',
+  ],
   build: {
     /*
     ** You can extend webpack config here
