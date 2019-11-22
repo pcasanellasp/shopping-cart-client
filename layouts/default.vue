@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <v-app>
     <Navbar v-if="isAuth" />
     <nuxt />
     <Footer v-if="isAuth" />
-  </div>
+  </v-app>
 </template>
 
 <script>
@@ -21,10 +21,3 @@ export default {
   },
 }
 </script>
-
-<style>
-html {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-}
-
-</style>

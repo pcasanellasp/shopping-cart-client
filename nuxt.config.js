@@ -41,6 +41,12 @@ export default {
     '/api/': { target: 'http://127.0.0.1:8084/', pathRewrite: { '^/api/': '' } },
   },
   auth: {
+    redirect: {
+      login: '/auth/login',
+      logout: '/auth/login',
+      callback: '/auth/login',
+      home: '/',
+    },
     strategies: {
       local: {
         endpoints: {
