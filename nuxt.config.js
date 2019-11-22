@@ -60,11 +60,9 @@ export default {
     manifest: {
       name: 'Shopping Cart',
       lang: 'es',
-      display: 'standalone',
+      display: 'fullscreen',
     },
     workbox: {
-      debug: true,
-      // dev: true,
       autoRegister: true,
     },
   },
