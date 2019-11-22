@@ -1,6 +1,7 @@
 
 export default {
   mode: 'universal',
+  dev: (process.env.NODE_ENV !== 'production'),
   /*
   ** Headers of the page
   */
@@ -68,12 +69,13 @@ export default {
     },
   },
   serverMiddleware: [
-    'redirect-ssl',
+    !this.dev ? 'redirect-ssl' : '',
   ],
   build: {
     /*
     ** You can extend webpack config here
     */
+    extractCSS: true,
     extend (config, ctx) {
     },
   },
