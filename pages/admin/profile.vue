@@ -21,7 +21,7 @@ export default {
   middleware: 'auth',
 
   computed: {
-    ...mapGetters(['auth'])
-  }
+    ...mapGetters(['auth']),
+  },
 }
 </script>

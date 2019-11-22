@@ -1,6 +1,6 @@
 export const state = () => ({
   lists: null,
-  list: null
+  list: null,
 })
 
 export const getters = {
@@ -9,18 +9,18 @@ export const getters = {
   },
   show (state) {
     return state.list
-  }
+  },
 }
 
 export const actions = {
   async getList ({ commit }, id) {
-    const res = await this.$axios.get(`lists/${id}`)
+    const res = await this.$axios.get(`/api/lists/${id}`)
     if (res.status === 200) {
       commit('show', res.data)
     }
   },
   async getLists ({ commit }) {
-    const res = await this.$axios.get('lists')
+    const res = await this.$axios.get('/api/lists')
     if (res.status === 200) {
       commit('add', res.data)
     }
@@ -30,7 +30,7 @@ export const actions = {
     if (res.status === 200) {
       commit('add', res.data)
     }
-  }
+  },
 }
 
 export const mutations = {
@@ -40,5 +40,5 @@ export const mutations = {
 
   show (state, list) {
     state.list = list
-  }
+  },
 }

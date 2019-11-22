@@ -5,5 +5,5 @@ export const getters = {
 
   auth (state) {
     return state.auth.user
-  }
+  },
 }

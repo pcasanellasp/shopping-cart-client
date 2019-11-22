@@ -31,7 +31,7 @@ export default {
     return {
       email: '',
       password: '',
-      error: null
+      error: null,
     }
   },
 
@@ -41,15 +41,15 @@ export default {
         await this.$auth.loginWith('local', {
           data: {
             email: this.email,
-            password: this.password
-          }
+            password: this.password,
+          },
         })
 
         this.$router.push('/')
       } catch (e) {
         this.error = e.response.data.message
       }
-    }
-  }
+    },
+  },
 }
 </script>

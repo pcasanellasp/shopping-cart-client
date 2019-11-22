@@ -13,6 +13,7 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
-    
+    'no-console': ['error', { 'allow': ['info', 'warn', 'error'] }],
+    'comma-dangle': ['error', 'always-multiline'],
   },
 }

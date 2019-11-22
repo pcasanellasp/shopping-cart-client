@@ -7,14 +7,14 @@ import { mapGetters } from 'vuex'
 
 export default {
   head: {
-    title: 'List'
+    title: 'List',
   },
   computed: mapGetters({
-    list: 'lists/show'
+    list: 'lists/show',
   }),
   async fetch ({ store, params }) {
     await store.dispatch('lists/getList', params.id)
-  }
+  },
 
 }
 </script>

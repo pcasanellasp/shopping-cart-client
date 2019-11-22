@@ -23,8 +23,8 @@
 export default {
   data () {
     return {
-      bottomNav: 'home'
+      bottomNav: 'home',
     }
-  }
+  },
 }
 </script>

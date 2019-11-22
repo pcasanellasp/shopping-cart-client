@@ -15,21 +15,21 @@ import { mapGetters, mapMutations, mapActions } from 'vuex'
 
 export default {
   head: {
-    title: 'Lists Products'
+    title: 'Lists Products',
   },
   computed: mapGetters({
-    lists: 'lists/get'
+    lists: 'lists/get',
   }),
   async fetch ({ store, params }) {
     await store.dispatch('lists/getLists')
   },
   methods: {
     ...mapMutations({
-      add: 'lists/add'
+      add: 'lists/add',
     }),
     ...mapActions({
-      create: 'lists/createList'
-    })
-  }
+      create: 'lists/createList',
+    }),
+  },
 }
 </script>

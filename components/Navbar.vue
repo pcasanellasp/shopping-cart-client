@@ -32,17 +32,17 @@ import { mapGetters } from 'vuex'
 export default {
   data () {
     return {
-      drawer: null
+      drawer: null,
     }
   },
   computed: {
-    ...mapGetters(['isAuth', 'auth'])
+    ...mapGetters(['isAuth', 'auth']),
   },
   methods: {
     async logout () {
       await this.$auth.logout()
-    }
-  }
+    },
+  },
 }
 </script>
 
