@@ -1,6 +1,6 @@
 <template>
   <v-bottom-navigation v-model="bottomNav" fixed>
-    <v-btn :to="{name: 'index'}" value="home">
+    <v-btn :to="{name: 'index'}" value="index" exact>
       <span>Home</span>
       <v-icon>mdi-home</v-icon>
     </v-btn>
@@ -23,7 +23,7 @@
 export default {
   data () {
     return {
-      bottomNav: 'home',
+      bottomNav: '',
     }
   },
 }
