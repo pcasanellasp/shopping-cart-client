@@ -38,7 +38,7 @@ export default {
     proxy: true,
   },
   proxy: {
-    '/api/': { target: 'http://127.0.0.1:8084/', pathRewrite: { '^/api/': '' } },
+    '/api/': { target: process.env.SHOPPING_CART_API || 'http://127.0.0.1:8084/', pathRewrite: { '^/api/': '' } },
   },
   auth: {
     redirect: {
