@@ -71,12 +71,13 @@ export default {
     ...mapActions({
       create: 'lists/createList',
     }),
-    createList () {
+    async createList () {
       this.create({
         name: this.name,
         status: this.status,
         completedAt: this.completedAt ? this.completedAt : null,
       })
+      await this.$store.dispatch('lists/getLists')
     },
   },
 }

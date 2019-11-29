@@ -28,7 +28,7 @@ export const actions = {
   async createList ({ commit }, list) {
     const { data, status } = await this.$axios.post('/api/lists', list)
     if (status === 200) {
-      commit('add', data)
+      commit('create', data)
     }
   },
 }
@@ -39,5 +39,8 @@ export const mutations = {
   },
   show (state, list) {
     state.list = list
+  },
+  create (state, list) {
+    state.lists.docs.push(list)
   },
 }
