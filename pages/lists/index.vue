@@ -1,20 +1,21 @@
 <template>
   <div>
-    <v-list-item-group color="primary">
-      <v-list-item v-for="(item, i) in lists.docs" :key="i" :to="{name: 'lists-id', params: {id: lists.docs[i]._id}}">
-        <v-list-item-content>
-          {{ item.name }} {{ item.products.length }}
-        </v-list-item-content>
-      </v-list-item>
-    </v-list-item-group>
+    <GetLists :lists="lists" />
+    <AddList />
   </div>
 </template>
 
 <script>
 import { mapGetters, mapMutations, mapActions } from 'vuex'
+import GetLists from '../../components/lists/GetLists'
+import AddList from '../../components/lists/AddList'
 
 export default {
   middleware: 'auth',
+  components: {
+    GetLists,
+    AddList,
+  },
   head: {
     title: 'Lists Products',
   },
@@ -34,3 +35,9 @@ export default {
   },
 }
 </script>
+
+<style>
+.btn-add {
+  bottom: 75px;
+}
+</style>
