@@ -31,6 +31,12 @@ export const actions = {
       commit('create', data)
     }
   },
+  async update ({ commit }, list) {
+    await this.$axios.post(`/api/lists/${list._id}`, list)
+  },
+  async delete ({ commit }, list) {
+    await this.$axios.delete(`/api/lists/${list._id}`)
+  },
 }
 
 export const mutations = {
@@ -42,5 +48,12 @@ export const mutations = {
   },
   create (state, list) {
     state.lists.docs.push(list)
+  },
+  update (state, list) {
+    state.lists.docs.find((item) => {
+      if (item._id === list._id) {
+        item = list
+      }
+    })
   },
 }
