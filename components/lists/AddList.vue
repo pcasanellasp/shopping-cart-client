@@ -69,7 +69,7 @@ export default {
   },
   methods: {
     ...mapActions({
-      create: 'lists/createList',
+      create: 'lists/create',
     }),
     async createList () {
       this.create({
@@ -77,7 +77,7 @@ export default {
         status: this.status,
         completedAt: this.completedAt ? this.completedAt : null,
       })
-      await this.$store.dispatch('lists/getLists')
+      await this.$store.dispatch('lists/get')
     },
   },
 }

@@ -23,7 +23,7 @@ export default {
     lists: 'lists/get',
   }),
   async fetch ({ store, params }) {
-    await store.dispatch('lists/getLists')
+    await store.dispatch('lists/get')
   },
   methods: {
     ...mapMutations({

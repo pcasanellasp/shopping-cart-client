@@ -24,7 +24,7 @@ export default {
     list: 'lists/show',
   }),
   async fetch ({ store, params }) {
-    await store.dispatch('lists/getList', params.id)
+    await store.dispatch('lists/show', params.id)
   },
 }
 </script>
